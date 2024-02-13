@@ -1,0 +1,13 @@
+<div class="m-4">
+    <h1 class="grey">{{componentName}}</h1>
+    <!-- <input type="text" class="form-control" (input)="getItem($event)" [value]="item"> -->
+   <input type="text" class="form-control" [(ngModel)]="item"> 
+    <p *ngIf="!cart.length" class="alert alert-danger">{{componentName}} is Empty</p>
+    <button [disabled]='btnDisabled' class="btn btn-success" (click)="addToCart()">Add</button>
+    <ul *ngIf="cart.length" class="list-group list-group-numbered" >
+       
+        <li class="list-group-item m-1" *ngFor="let i of cart">{{i|uppercase}} <span class="">{{date|date}}</span></li>
+       
+    </ul>
+    
+</div>
