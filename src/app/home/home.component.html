@@ -1,6 +1,7 @@
-<h2>Home</h2>
+<h2>Home {{myname}}</h2>
 <h4>Total task : {{task.length}}</h4>
 <input type="text" class="form-control" #nam> 
 <button  class="btn btn-primary" (click)="enterName(nam)">Enter Name</button>
 <br>
 <app-cart [customer]="name" (taskEvent)="updateTask($event)" ></app-cart>
+<input type="text" [(ngModel)]="myname">

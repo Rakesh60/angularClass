@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   name = ''
   task=[]
+  myname=''
 
   enterName(n: any) {
 
