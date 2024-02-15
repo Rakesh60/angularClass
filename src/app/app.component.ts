@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,9 @@ export class AppComponent {
   show=true;
   title2='Iphone se 2020';
   price=4500;
+  
+  constructor(private cData:DataService){
+  }
   updateColour(){
     this.color1='white';
     this.color2='teal';

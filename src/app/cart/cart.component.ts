@@ -1,4 +1,5 @@
 import { Component,EventEmitter,Input, Output } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-cart',
@@ -11,14 +12,14 @@ export class CartComponent {
   item:any='';
   cart:any=[]
   date:any=''
-  @Input() customer='rak';
+  @Input() userName='rak';
   @Output() taskEvent =new EventEmitter;
   
- constructor(){
+ constructor(private myData:DataService){
   setTimeout(()=>{
     this.btnDisabled=false;
   },1000)
-
+  this.cart=this.myData.caratData;
  }
 
 //  getItem(e:any){
