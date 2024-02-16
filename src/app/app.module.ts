@@ -8,6 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { ShortenPipe } from './shorten.pipe';
 import { MyCapPipe } from './my-cap.pipe';
 import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+
+const routes:Routes=[
+  {path:'',component:HomeComponent},
+  {path:'cart',component:CartComponent},
+  {path:'products/:fruits',component:ProductsComponent}
+];
 
 @NgModule({
   declarations: [
@@ -16,12 +24,14 @@ import { HomeComponent } from './home/home.component';
     ShortenPipe,
    
     MyCapPipe,
-         HomeComponent
+         HomeComponent,
+         ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+   RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
