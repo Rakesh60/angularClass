@@ -1,5 +1,45 @@
 <!-- <app-home></app-home> -->
-<button class=" btn btn-success mx-2" routerLink="/">Home</button>
+<!-- <button class=" btn btn-success mx-2" routerLink="/">Home</button>
 <button class=" btn btn-success mx-2" routerLink="/cart">Cart</button>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<h1>{{title}}</h1>
+<div class="container">
+    <form #formtemp="ngForm" (ngSubmit)="form_data(formtemp.value)">
+        <div class="mb-3">
+            <label for="" class="form-label">First Name</label>
+            <input
+                ngModel
+                type="text"
+                class="form-control"
+                name="firstname"
+                id=""
+                placeholder="Enter First Name"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Last Name</label>
+            <input
+                
+                type="text"
+                class="form-control"
+                ngModel
+                name="lastname"
+                id=""
+                placeholder="Enter Last Name"
+            />
+        </div>
+      
+        <button class="btn btn-secondary mb-2">Print Your Full Name</button>
+        
+    </form>
+
+<div
+    class="alert alert-primary"
+    role="alert"
+>
+    <strong>Your Full Name is </strong> {{userdata.firstname|titlecase}} {{userdata.lastname|titlecase}}
+</div>
+
+    
+</div>

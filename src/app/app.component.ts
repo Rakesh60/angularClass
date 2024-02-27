@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { DataService } from './data.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angularClass';
+  title = 'Learning Angular form';
   color1='red';
   color2='yellow';
   show=true;
@@ -20,5 +21,12 @@ export class AppComponent {
     this.color1='white';
     this.color2='teal';
 
+  }
+
+  userdata:any={};
+  form_data(data:NgForm){
+    this.userdata=data;
+    
+   
   }
 }
