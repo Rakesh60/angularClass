@@ -3,8 +3,8 @@
 <button class=" btn btn-success mx-2" routerLink="/cart">Cart</button>
 
 <router-outlet></router-outlet> -->
-<h1>{{title}}</h1>
-<div class="container">
+
+<!-- <div class="container">
     <form #formtemp="ngForm" (ngSubmit)="form_data(formtemp.value)">
         <div class="mb-3">
             <label for="" class="form-label">First Name</label>
@@ -40,6 +40,39 @@
 >
     <strong>Your Full Name is </strong> {{userdata.firstname|titlecase}} {{userdata.lastname|titlecase}}
 </div>
+
+    
+</div> -->
+
+
+<div class="container card bg-dark text-white">
+    <img src="https://ionic.io/blog/wp-content/uploads/2024/02/angular-feature-image-1.png" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h1 class="text-center">{{title}}</h1>
+        
+        <div class="table-responsive">
+            <h4 class="text-warning">Data Coming App.ts Same service used in Footer</h4>
+
+            <table class=" ">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="" *ngFor="let data of data_users">
+                        <td>{{data.name}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.phone}}</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-footer></app-footer>
 
     
 </div>

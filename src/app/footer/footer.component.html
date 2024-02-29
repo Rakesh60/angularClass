@@ -1,0 +1,32 @@
+<div class="card bg-dark">
+    <div class="card-header text-white">
+      Angular Footer
+    </div>
+    <div class="card-body ">
+      <blockquote class="blockquote mb-0">
+        <p class="text-warning">Generated Footer by Angular Component</p>
+        <footer class="text-white">created by <cite title="Source Title">Rakesh kumar</cite></footer>
+      </blockquote>
+      <div class="table-responsive">
+        <h4 class="text-primary">Data Coming From Service</h4>
+        <table class="text-white ">
+            
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="" *ngFor="let data of data_users">
+                    <td>{{data.name}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.phone}}</td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+    </div>
+  </div>

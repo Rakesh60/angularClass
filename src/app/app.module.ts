@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 const routes:Routes=[
   {path:'',component:HomeComponent},
   {path:'cart',component:CartComponent},
@@ -25,7 +26,8 @@ const routes:Routes=[
    
     MyCapPipe,
          HomeComponent,
-         ProductsComponent
+         ProductsComponent,
+         FooterComponent
   ],
   imports: [
     BrowserModule,
